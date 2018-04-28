@@ -30,7 +30,6 @@ class Application
           @@cart << add_search_term
           resp.write "added #{add_search_term}"
       end
-      binding.pry
   elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
